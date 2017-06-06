@@ -12,37 +12,37 @@
 3. Набраю в браузере localhost -> phpMyAdmin и создаю базу данных yii2basic с параметрами прописанными по адресу F:\xampp\htdocs\test\Yii-weather\basic\config\db.php
 
 4. Создаю в ней таблицу:<br/>
-CREATE TABLE `weather` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `date` DATE NOT NULL,
-  `month` INT(11) NOT NULL DEFAULT '0',
-  `nweek` INT(11) NOT NULL DEFAULT '0',
-  `dweek` INT(11) NOT NULL DEFAULT '0',
-  `tday` INT(11) NOT NULL DEFAULT '0',
-  `tnight` INT(11) NOT NULL DEFAULT '0',
-  `delmaxweek` BOOLEAN NOT NULL DEFAULT FALSE,
-  `delmaxmonth` BOOLEAN NOT NULL DEFAULT FALSE
+CREATE TABLE `weather` (<br/>
+  `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,<br/>
+  `date` DATE NOT NULL,<br/>
+  `month` INT(11) NOT NULL DEFAULT '0',<br/>
+  `nweek` INT(11) NOT NULL DEFAULT '0',<br/>
+  `dweek` INT(11) NOT NULL DEFAULT '0',<br/>
+  `tday` INT(11) NOT NULL DEFAULT '0',<br/>
+  `tnight` INT(11) NOT NULL DEFAULT '0',<br/>
+  `delmaxweek` BOOLEAN NOT NULL DEFAULT FALSE,<br/>
+  `delmaxmonth` BOOLEAN NOT NULL DEFAULT FALSE<br/>
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-5. Подготавливаю файл f:/tmp/weather.cvs в соответствии со структурой таблицы:
-id,date,month,nweek,dweek,day,nightdelmaxweek,delmaxmonth
-1,2016-1-1,1,1,6,-8,-11
-2,2016-1-2,1,1,7,-6,-13
-....
-522,2017-6-5,6,23,2,10,5,0,0
-523,2017-6-6,6,23,3,12,6,0,0
+5. Подготавливаю файл f:/tmp/weather.cvs в соответствии со структурой таблицы:<br/>
+id,date,month,nweek,dweek,day,nightdelmaxweek,delmaxmonth<br/>
+1,2016-1-1,1,1,6,-8,-11<br/>
+2,2016-1-2,1,1,7,-6,-13<br/>
+....<br/>
+522,2017-6-5,6,23,2,10,5,0,0<br/>
+523,2017-6-6,6,23,3,12,6,0,0<br/>
 
-Предварительно температурные данные генерирую в эксель файле по формуле 
-tday=СЛУЧМЕЖДУ(9;13)+AE28 
-tnight==СЛУЧМЕЖДУ(4;8)+AE28
-где AE28=SIN(AP28)*20 и AP28=(-1/2+(-60+2*n)/360)*ПИ(), где n-ряд целых чиел от 1 до 523
+Предварительно температурные данные генерирую в эксель файле по формуле <br/>
+tday=СЛУЧМЕЖДУ(9;13)+AE28 <br/>
+tnight==СЛУЧМЕЖДУ(4;8)+AE28<br/>
+где AE28=SIN(AP28)*20 и AP28=(-1/2+(-60+2*n)/360)*ПИ(), где n-ряд целых чиел от 1 до 523<br/>
 
-6. Загружаю данные из файла в нашу таблицу:
-LOAD DATA INFILE 'f:/tmp/weather.csv'
-INTO TABLE weather
-FIELDS TERMINATED BY ',' ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
+6. Загружаю данные из файла в нашу таблицу:<br/>
+LOAD DATA INFILE 'f:/tmp/weather.csv'<br/>
+INTO TABLE weather<br/>
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'<br/>
+LINES TERMINATED BY '\n'<br/>
+IGNORE 1 ROWS<br/>
 
 База данных прилагается: yii2basic.sql
 
