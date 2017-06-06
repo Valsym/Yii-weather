@@ -29,13 +29,24 @@ class EntryFormTemp extends Model
             ['to', 'CheckDateFormat'],
             // встроенный валидатор определяется как анонимная функция
             ['from', function ($attribute, $params) {
-                if (strtotime($this->$attribute) < mktime(0, 0, 0, 1, 1, 2016)) {
-                    $this->addError($attribute, 'Дата "От" должна быть не ранее 1 января 2016 и быть в формате 2016-01-01.');
+                $from = strtotime($this->$attribute);
+                if ($from < mktime(0, 0, 0, 1, 1, 2016) || $from > time()) {
+                    return $this->addError($attribute, 'Дата "От" должна быть не ранее 1 января 2016 и не позднее текущей.');
+                }
+                if (!$this->CheckDateFormat($this->$attribute)) {
+                    return $this->addError($attribute, 'Дата "От" должна быть введена в формате Y-m-d (год-месяц-день), месяц - число');
                 }
             }],
             ['to', function ($attribute, $params) {
-                if (strtotime($this->$attribute) > strtotime("now")) {
-                    $this->addError($attribute, 'Дата "До" должна быть не позднее 17 июня 2017 и быть в формате 2016-06-03.');
+//                if (strtotime($this->$attribute) > strtotime("now")) {
+//                    $this->addError($attribute, 'Дата "До" должна быть не позднее текущей.');
+//                }
+                $to = strtotime($this->$attribute);
+                if ($to < mktime(0, 0, 0, 1, 1, 2016) || $to > time()) {
+                    return $this->addError($attribute, 'Дата "До" должна быть не ранее 1 января 2016 и не позднее текущей.');
+                }
+                if (!$this->CheckDateFormat($this->$attribute)) {
+                    $this->addError($attribute, 'Дата "От" должна быть введена в формате Y-m-d (год-месяц-день), месяц - число');
                 }
             }],
         ];
@@ -43,7 +54,7 @@ class EntryFormTemp extends Model
     
    public function CheckDateFormat($data)
    {
-        $pattern = "/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/"; 
+        $pattern = "/^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$/"; 
         // Основной 2013-10-22  
         if ( preg_match($pattern, $data, $matches) ) {
             return checkdate($matches[2], $matches[3], $matches[1]) ? true : false;
