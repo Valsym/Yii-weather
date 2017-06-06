@@ -11,7 +11,7 @@
 
 3. Набраю в браузере localhost -> phpMyAdmin и создаю базу данных yii2basic с параметрами прописанными по адресу F:\xampp\htdocs\test\Yii-weather\basic\config\db.php
 
-4. Создаю в ней таблицу:
+4. Создаю в ней таблицу:<br/>
 CREATE TABLE `weather` (
   `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `date` DATE NOT NULL,
