@@ -5,7 +5,7 @@
 Решение:
 
 1. Устанавливаю Yii 2.0  по инструкции https://nix-tips.ru/yii2-api-guides/guide-ru-start-installation.html
-в папку F:\xampp\htdocs\Yii-weather\basic\/basic/
+в папку F:\xampp\htdocs\Yii-weather\basic\
 
 2. Локально вхожу в XAMPP Control Panel и стартую сервер Apache и базу данных MySQL
 
