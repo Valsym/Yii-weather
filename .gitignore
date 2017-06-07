@@ -1,11 +1,12 @@
-basic/ composer.json
+basic/composer.json
 basic/LICENSE.md
-basic/ composer.lock
-basic/      web
+basic/composer.lock
+basic/web
 basic/codeception.yml  
-basic/      yii
-basic/README.md   vendor
-basic/      yii.bat
+basic/yii
+basic/README.md   
+basic/vendor
+basic/yii.bat
 basic/requirements.php  
 basic/assets
 basic/mail
