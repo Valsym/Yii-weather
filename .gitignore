@@ -1,17 +1,18 @@
-/basic/assets
-/basic/mail
-/basic/runtime
-/basic/vendor
-/basic/commands
-/basic/config
-/basic/ composer.json
-/basic/LICENSE.md
-/basic/ composer.lock
-/basic/      web
-/basic/codeception.yml  
-/basic/      yii
-/basic/README.md   vendor
-/basic/      yii.bat
-/basic/requirements.php  
+basic/ composer.json
+basic/LICENSE.md
+basic/ composer.lock
+basic/      web
+basic/codeception.yml  
+basic/      yii
+basic/README.md   vendor
+basic/      yii.bat
+basic/requirements.php  
+basic/assets
+basic/mail
+basic/runtime
+basic/vendor
+basic/commands
+basic/config
+ 
 
 
