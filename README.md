@@ -5,7 +5,7 @@
 Решение:
 
 1. Устанавливаю Yii 2.0  по инструкции https://nix-tips.ru/yii2-api-guides/guide-ru-start-installation.html
-в папку F:\xampp\htdocs\Yii-weather\basic\
+в папку F:\xampp\htdocs\Yii-weather\basic\/basic/
 
 2. Локально вхожу в XAMPP Control Panel и стартую сервер Apache и базу данных MySQL
 
@@ -63,4 +63,6 @@ IGNORE 1 ROWS<br/>
 После чего делается выборка данных из базы в массив объектов $weather и далее рендерится во вьюер \views\weather\index.php, в котором отображается итоговая таблица.
 
 Запуск приложения: http://localhost/test/Yii-weather/basic/web/index.php?r=weather%2Findex
+
+9. Добавил unit-тесты: /basic/tests/unit/models/EntryFormTempTest.php
 

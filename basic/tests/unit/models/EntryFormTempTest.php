@@ -1,8 +1,6 @@
 <?php
 namespace tests\models;
 
-//use Yii;
-//use yii\web\Controller;
 use app\models\EntryFormTemp;
 
 class EntryFormTempTest extends \Codeception\Test\Unit
@@ -41,7 +39,6 @@ class EntryFormTempTest extends \Codeception\Test\Unit
     
     public function testCheckDateFormat()
     {
-        //expect_that($user = User::findIdentity(100));
         $this->assertTrue(EntryFormTemp::CheckDateFormat('2017-06-07'));
         
         $this->assertFalse(EntryFormTemp::CheckDateFormat('2017-Jun-07'));
