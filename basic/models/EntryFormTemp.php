@@ -38,9 +38,6 @@ class EntryFormTemp extends Model
                 }
             }],
             ['to', function ($attribute, $params) {
-//                if (strtotime($this->$attribute) > strtotime("now")) {
-//                    $this->addError($attribute, 'Дата "До" должна быть не позднее текущей.');
-//                }
                 $to = strtotime($this->$attribute);
                 if ($to < mktime(0, 0, 0, 1, 1, 2016) || $to > time()) {
                     return $this->addError($attribute, 'Дата "До" должна быть не ранее 1 января 2016 и не позднее текущей.');
