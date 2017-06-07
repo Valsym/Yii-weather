@@ -5,15 +5,15 @@ basic/web
 basic/codeception.yml  
 basic/yii
 basic/README.md   
-basic/vendor
+basic/vendor/*
 basic/yii.bat
 basic/requirements.php  
-basic/assets
-basic/mail
-basic/runtime
-basic/vendor
-basic/commands
-basic/config
+basic/assets/*
+basic/mail/*
+basic/runtime/*
+basic/vendor/*
+basic/commands/*
+basic/config/*
  
 
 
