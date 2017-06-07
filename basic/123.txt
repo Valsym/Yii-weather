@@ -1,4 +1,0 @@
-123.txt		 composer.json	LICENSE.md  requirements.php  views
-assets		 composer.lock	mail	    runtime	      web
-codeception.yml  config		models	    tests	      yii
-commands	 controllers	README.md   vendor	      yii.bat
