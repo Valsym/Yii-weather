@@ -1,4 +1,0 @@
-====== 2017-06-07 21:24:32 =====
-currentmonth=06
- firstmonth=04
- lastmonth=06
