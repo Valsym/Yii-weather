@@ -68,6 +68,7 @@ IGNORE 1 ROWS<br/>
 Запуск тестов из папки /basic/  codecept run unit
 
 10. Добавил функциональные тесты: https://github.com/Valsym/Yii-weather/tree/master/basic/tests/functional<br/>
-Запуск из папки /basic/  codecept run functional
+Запуск из папки /basic/  codecept run functional<br/>
+Важно! Чтобы функциональные тесты отработали нормально требуется запустить сервер и MySQL.
 
 
