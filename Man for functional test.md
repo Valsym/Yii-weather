@@ -14,7 +14,7 @@ $I->submitForm('#date-form', [<br/>
 <?php<br/>
 $db = require(__DIR__ . '/db.php');<br/>
 // test database! Important not to run tests on production or development databases<br/>
-$db['dsn'] = 'mysql:host=localhost;dbname=yii2_basic_tests';<br/>
+$db['dsn'] = 'mysql:host=localhost;<b>dbname=yii2_basic_tests</b>';<br/>
 
 return $db;<br/>
 
