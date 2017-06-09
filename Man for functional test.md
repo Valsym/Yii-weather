@@ -9,21 +9,21 @@ $I->submitForm('#date-form', [<br/>
 то тест упадет с ошибкой типа:<br/>
   [yii\db\Exception] SQLSTATE[HY000] [1049] Unknown database 'yii2_basic_tests' 
  
-Проверьте настройки: 
-1. Файл basic/config/test_db.php:
-<?php
-$db = require(__DIR__ . '/db.php');
-// test database! Important not to run tests on production or development databases
-$db['dsn'] = 'mysql:host=localhost;dbname=yii2_basic_tests';
+Проверьте настройки: <br/>
+1. Файл basic/config/test_db.php:<br/>
+<?php<br/>
+$db = require(__DIR__ . '/db.php');<br/>
+// test database! Important not to run tests on production or development databases<br/>
+$db['dsn'] = 'mysql:host=localhost;dbname=yii2_basic_tests';<br/>
 
-return $db;
+return $db;<br/>
 
-2. /tests/functional.suite.yml
-class_name: FunctionalTester
-modules:
-    enabled:
-      - Filesystem
-      - Yii2
+2. /tests/functional.suite.yml<br/>
+class_name: FunctionalTester<br/>
+modules:<br/>
+    enabled:<br/>
+      - Filesystem<br/>
+      - Yii2<br/>
 	  
 3. Создайте новую Базу данных для тестов yii2_basic_tests и экспортируйте туда ваши таблицы из основной БД.
 
