@@ -86,18 +86,13 @@ modules:<br/>
 
 12. Покрытие кода тестами.<br/>
 В конфигурационный файл codeception.yml добавить такой код:<br/>
-# To enable code coverage:<br/>
+
 coverage:<br/>
-#    #c3_url: http://localhost:8080/index-test.php/<br/>
     enabled: true<br/>
-#    #remote: true<br/>
-#    #remote_config: '../tests/codeception.yml'<br/>
     whitelist:<br/>
         include:<br/>
             - models/*<br/>
             - controllers/*<br/>
-#            - commands/*<br/>
-#            - mail/*<br/>
 
 Запуск локального покрытия тестами:<br/>
 codecept run --coverage --xml --html<br/><br/>
