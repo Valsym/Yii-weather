@@ -1,4 +1,4 @@
-# Yii-weather --->   https://github.com/Valsym/Yii-test
+# Yii-weather
 
 Задача: https://goo.gl/Y7hLdJ
 
@@ -64,5 +64,10 @@ IGNORE 1 ROWS<br/>
 
 Запуск приложения: http://localhost/test/Yii-weather/basic/web/index.php?r=weather%2Findex
 
-9. Добавил unit-тесты: /basic/tests/unit/models/EntryFormTempTest.php
+9. Добавил unit-тесты: /basic/tests/unit/models/EntryFormTempTest.php<br/>
+Запуск тестов из папки /basic/  codecept run unit
+
+10. Добавил функциональные тесты: \basic\tests\functional\WeatherControllerCest.php<br/>
+Запуск из папки /basic/  codecept run functional
+
 

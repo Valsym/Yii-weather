@@ -1,0 +1,16 @@
+/*
+!/basic/models
+!/basic/tests/*
+!/basic/controllers
+!/basic/views
+!/tests/functional
+!/tests/unit
+!/tests/web
+!/basic/.gitignore
+!README.md
+!weather.csv
+!yii2basic.sql
+
+ 
+
+
