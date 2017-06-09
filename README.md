@@ -71,4 +71,7 @@ IGNORE 1 ROWS<br/>
 Запуск из папки /basic/  codecept run functional<br/>
 Важно! Чтобы функциональные тесты отработали нормально требуется запустить сервер и MySQL.
 
+11. Добавил приемочные тесты: codecept run facceptance<br/>
+В насторойках изменил файл acceptance.suite.yml для PhpBrowser (см. в папке \basic\tests).
+
 

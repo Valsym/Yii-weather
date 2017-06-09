@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<?= $form->field($model, 'to')->label('До - дата в формате Y-m-d (год - номер месяца - день месяца)') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary', 'name' => 'date-button']) ?>
     </div>
 
 <?php ActiveForm::end(); ?>
