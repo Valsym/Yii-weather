@@ -2,16 +2,7 @@ class_name: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-         #   url: http://localhost/test/basic/
-        #- WebDriver:
-            #config:
-              #PhpBrowser:
-                #url: http://127.0.0.1:8080/test/basic/web/index-test.php
-                url: http://localhost/test/Yii-weather/basic/web/index-test.php
-            #url: http://localhost/test/basic/
-            #url: http://127.0.0.1:4444/
-            #browser: firefox
-            #browser: PhpBrowser
+            url: http://localhost/test/Yii-weather/basic/web/index-test.php
         - Yii2:
             part: orm
             entryScript: index-test.php
