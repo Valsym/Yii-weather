@@ -11,3 +11,10 @@ modules:
     enabled:
       - Filesystem
       - Yii2
+    config:
+        Db:
+          dsn: mysql:host=localhost;dbname=yii2_basic_tests
+          user: root
+          password: 
+          dump: _data/dump.sql
+          charset: utf8

@@ -31,7 +31,7 @@ class EntryFormTemp extends Model
             ['from', function ($attribute, $params) {
                 $from = strtotime($this->$attribute);
                 if ($from < mktime(0, 0, 0, 1, 1, 2016) || $from > time()) {
-                    return $this->addError($attribute, 'Дата "От" должна быть не ранее 1 января 2016 и не позднее текущей');
+                    return $this->addError($attribute, 'Дата "От" должна быть не ранее 1 января 2016 и не позднее текущей.');
                 }
                 if (!$this->CheckDateFormat($this->$attribute)) {
                     return $this->addError($attribute, 'Дата "От" должна быть введена в формате Y-m-d (год-месяц-день), месяц - число');

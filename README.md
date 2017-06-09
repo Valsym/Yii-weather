@@ -72,6 +72,37 @@ IGNORE 1 ROWS<br/>
 Важно! Чтобы функциональные тесты отработали нормально требуется запустить сервер и MySQL.
 
 11. Добавил приемочные тесты: codecept run acceptance<br/>
-В насторойках изменил файл acceptance.suite.yml для PhpBrowser (см. в папке \basic\tests).
+В настройках изменил файл acceptance.suite.yml для PhpBrowser (см. в папке \basic\tests).
+Настройки в файле acceptance.suite.yml должны быть следующие:<br/>
+class_name: AcceptanceTester<br/>
+modules:<br/>
+    enabled:<br/>
+        - PhpBrowser:<br/>
+            url: http://localhost/test/Yii-weather/basic/web/index-test.php //вот здесь реальный путь до приложения<br/>
+        - Yii2:<br/>
+            part: orm<br/>
+            entryScript: index-test.php<br/>
+            cleanup: false<br/>
+
+12. Покрытие кода тестами.<br/>
+В конфигурационный файл codeception.yml добавить такой код:<br/>
+# To enable code coverage:<br/>
+coverage:<br/>
+#    #c3_url: http://localhost:8080/index-test.php/<br/>
+    enabled: true<br/>
+#    #remote: true<br/>
+#    #remote_config: '../tests/codeception.yml'<br/>
+    whitelist:<br/>
+        include:<br/>
+            - models/*<br/>
+            - controllers/*<br/>
+#            - commands/*<br/>
+#            - mail/*<br/>
+
+Запуск локального покрытия тестами:<br/>
+codecept run --coverage --xml --html<br/><br/>
+XML и HTML отчеты см. в \basic\tests\_output<br/>
+
+
 
 

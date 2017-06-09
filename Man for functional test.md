@@ -24,10 +24,17 @@ modules:<br/>
     enabled:<br/>
       - Filesystem<br/>
       - Yii2<br/>
+    config:<br/>
+        Db:<br/>
+          dsn: mysql:host=localhost;dbname=yii2_basic_tests<br/>
+          user: root<br/>
+          password: <br/>
+          dump: _data/dump.sql<br/>
+          charset: utf8<br/>
 	  
 3. Создайте новую Базу данных для тестов yii2_basic_tests и экспортируйте туда ваши таблицы из основной БД.<br/>
 
 4. Чтобы все заработало как надо, запустите сервер и MySQL.<br/>
 
-5. Запуск тестов из папки /basic/  командой: codecept run unit<br/>
+5. Запуск тестов из папки /basic/  командой: codecept run functional <br/>
 
