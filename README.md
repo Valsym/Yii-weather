@@ -67,7 +67,7 @@ IGNORE 1 ROWS<br/>
 9. Добавил unit-тесты: /basic/tests/unit/models/EntryFormTempTest.php<br/>
 Запуск тестов из папки /basic/  codecept run unit
 
-10. Добавил функциональные тесты: \basic\tests\functional\WeatherControllerCest.php<br/>
+10. Добавил функциональные тесты: https://github.com/Valsym/Yii-weather/tree/master/basic/tests/functional<br/>
 Запуск из папки /basic/  codecept run functional
 
 
