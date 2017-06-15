@@ -23,8 +23,7 @@ class EntryFormTemp extends Model
 				$count = date('j') + $daysBeforeMonth + $daysBeforeTwoMonth - 2;
 				return date('Y-m-d', strtotime($attribute === 'to' ? '-0 days' : "-$count days"));
 			}],
-			//[['from', 'to'], 'date'],
-            // встроенный валидатор определяется как модель метода validateCountry()
+
             ['from', 'CheckDateFormat'],
             ['to', 'CheckDateFormat'],
             // встроенный валидатор определяется как анонимная функция
